@@ -27,7 +27,7 @@ public class Ejecutor {
         n = entrada.nextInt();
 
         for (int i = 0; i < n; i++) {
-            System.out.println("Ingrese la marca del computador");
+            System.out.println("Ingrese la marca del computador " + (i + 1));
             entrada.nextLine();
             marcaComp = entrada.nextLine();
             System.out.println("Ingrese la marca del procesador");
@@ -35,6 +35,7 @@ public class Ejecutor {
             System.out.println("Ingrese el costo del procesador");
             costoPro = entrada.nextDouble();
             System.out.println("Ingrese la marca de la memoria");
+            entrada.nextLine();
             marcaMem = entrada.nextLine();
             System.out.println("Ingrese el costo de la memoria");
             costoMem = entrada.nextDouble();
@@ -46,6 +47,10 @@ public class Ejecutor {
             com1.add(comp);
 
         }
+        Venta vent1 = new Venta(com1);
+        vent1.calcularValorVenta();
+        
+        System.out.printf("%s\n", vent1);
 
     }
 }

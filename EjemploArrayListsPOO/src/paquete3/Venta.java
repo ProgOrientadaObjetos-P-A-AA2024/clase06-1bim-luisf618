@@ -41,19 +41,25 @@ public class Venta {
     public String toString() {
         String cadena = "Reporte total de ventas";
         for (int i = 0; i < computadoras.size(); i++) {
-            cadena = String.format("%s\nComputadora %d"
+            cadena = String.format("%s\nComputadora %d\n"
                 + "Marca del computador: %s\n"
-                + "Costo del computador: %.2f\\n"
+                + "Costo del computador: %.2f\n"
                 + "Marca del procesador: %s\n"
                 + "Costo del procesador: %.2f\n"
                 + "Marca de la memoria: %s\n"
-                + "Costo de la memoria: %.2f\n"
-                + "Valor total de la venta: %.2f\n", 
-                    cadena,
-                    computadoras.get(i).obtenerMarca(), );
-        return cadena;
+                + "Costo de la memoria: %.2f\n", 
+                    cadena, computadoras.size(),
+                    computadoras.get(i).obtenerMarca(), 
+                    computadoras.get(i).obtenerCostoComputador(), 
+                    computadoras.get(i).obtenerProcesador().obtenerMarca(),
+                    computadoras.get(i).obtenerProcesador().obtenerCosto(),
+                    computadoras.get(i).obtenerMemoria().obtenerMarca(),
+                    computadoras.get(i).obtenerMemoria().obtenerCosto());
         }
-        
+        cadena = String.format("%s\nValor total de la venta: %.2f\n",
+                cadena,
+                valorVenta);
+        return cadena;
         
     }
     
