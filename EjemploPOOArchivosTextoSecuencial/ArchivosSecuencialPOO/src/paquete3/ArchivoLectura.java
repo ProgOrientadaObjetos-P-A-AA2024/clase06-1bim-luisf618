@@ -80,6 +80,8 @@ public class ArchivoLectura {
 
                 ArrayList<String> cadenaProfesor = new ArrayList<>(
                         Arrays.asList(profesor.split("\\|")));
+                // Cualquier caracter que no sea , y ; debe ir con \\ para que
+                // lo tome en cuenta
                 // ["Tara Hernandez", "contratado"]
                 //        0                 1
 
