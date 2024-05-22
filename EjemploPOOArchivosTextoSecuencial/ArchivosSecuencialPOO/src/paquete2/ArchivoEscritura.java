@@ -56,6 +56,7 @@ public class ArchivoEscritura {
     public void establecerSalida() {
         try {
             salidaArchivo = new Formatter(new FileWriter(rutaArchivo, true));
+            // Iniocializar la variable donde se ira almacenando los datos
             Profesor p = obtenerRegistro();
             
             String cadenaRegistro = String.format("%s;%s",

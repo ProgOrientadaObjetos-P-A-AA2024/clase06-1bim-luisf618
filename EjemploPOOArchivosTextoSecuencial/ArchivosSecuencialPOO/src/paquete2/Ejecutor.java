@@ -25,6 +25,8 @@ public class Ejecutor {
         archivo.establecerRegistro(profesor1);
         // establecer en el archivo el atributo del registro
         archivo.establecerSalida();
+        // Metodo con el cual podemos ir almacenando los datos dentro de un 
+        // archivo
         
         // establecer el valor del atributo registro
         archivo.establecerRegistro(profesor2);
@@ -39,6 +41,9 @@ public class Ejecutor {
         // proceso para lectura del archivo
         ArchivoLectura lectura = new ArchivoLectura(nombreArchivo);
         lectura.establecerLista();
+        // Ir guardando los datos del archivo en una lista, para que se queden
+        // almacenados
+        
         // System.out.println(lectura.toString());
         System.out.println(lectura);
         lectura.cerrarArchivo();
